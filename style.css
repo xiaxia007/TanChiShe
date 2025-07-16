@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9e7ff 0%, #b2f7ef 100%);
+  font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background-image: url('https://cdn.jsdelivr.net/gh/ChirmyCat/cdn-cursor/snake-bg-cute.svg');
+  background-repeat: repeat;
+  background-size: 120px 120px;
+  opacity: 0.12;
+  z-index: 0;
+  pointer-events: none;
+}
+h1 {
+  margin-top: 40px;
+  color: #4caf50;
+  text-shadow: 1px 2px 8px #fff, 0 1px 0 #b2f7ef;
+  z-index: 1;
+}
+#score {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #333;
+  background: rgba(255,255,255,0.7);
+  border-radius: 8px;
+  padding: 4px 16px;
+  z-index: 1;
+}
+#gameCanvas {
+  background: #fffbe7;
+  border: 3px solid #ffb6b9;
+  box-shadow: 0 4px 24px rgba(255,182,185,0.18);
+  border-radius: 18px;
+  z-index: 1;
+}
+#startBtn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 18px;
+  background: linear-gradient(90deg, #ffb6b9 0%, #b2f7ef 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(178,247,239,0.18);
+  z-index: 1;
+}
+#startBtn:hover {
+  background: linear-gradient(90deg, #b2f7ef 0%, #ffb6b9 100%);
+  box-shadow: 0 4px 16px rgba(255,182,185,0.22);
+} 
